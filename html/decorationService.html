@@ -40,7 +40,7 @@
   <!-- 定制 -->
   <section id="customize" class="service-customize plr10 mt30">
     <!-- 轮播 -->
-    <div class="swiper-container oh">
+    <div class="swiper-container swiper2 oh">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
           <div class="fn19 bold c2">惠天下·<span class="theme">精品整装</span></div>
@@ -127,7 +127,59 @@
     <!--  -->
     <div class="fn18 c3 mt20 text-center">整装定制·主材配置覆盖8大功能空间</div>
     <!-- 图标 -->
-    <ul class="type fn7 text-center ln15 mtb20">
+    <div id="iconNav" class="swiper-container oh iconNav mtb10">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="item active">
+            <img src="../imgs/service_icon01.png" alt="">
+            <div>客厅</div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="item">
+            <img src="../imgs/service_icon02.png" alt="">
+            <div>卧室</div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="item">
+            <img src="../imgs/service_icon03.png" alt="">
+            <div>餐厅</div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="item">
+            <img src="../imgs/service_icon04.png" alt="">
+            <div>厨房</div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="item">
+            <img src="../imgs/service_icon5.png" alt="">
+            <div>卫生间</div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="item">
+            <img src="../imgs/service_icon6.png" alt="">
+            <div>书房</div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="item">
+            <img src="../imgs/service_icon7.png" alt="">
+            <div>儿童房</div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="item">
+            <img src="../imgs/service_icon8.png" alt="">
+            <div>阳台</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <ul class="type fn7 text-center ln15 mtb20">
       <li class="active">
         <img src="../imgs/service_icon01.png" alt="">
         <div>客厅</div>
@@ -148,7 +200,19 @@
         <img src="../imgs/service_icon5.png" alt="">
         <div>卫生间</div>
       </li>
-    </ul>
+      <li>
+        <img src="../imgs/service_icon6.png" alt="">
+        <div>书房</div>
+      </li>
+      <li>
+        <img src="../imgs/service_icon7.png" alt="">
+        <div>儿童房</div>
+      </li>
+      <li>
+        <img src="../imgs/service_icon8.png" alt="">
+        <div>阳台</div>
+      </li>
+    </ul> -->
     <!-- 配置 -->
     <div class="swiper-container mlr_10">
       <div class="swiper-wrapper">
@@ -419,7 +483,7 @@
     </ul>
   </section>
   <!-- 报价弹窗 -->
-  <section class="dialog none">
+  <section id="dialog" class="dialog none">
     <div class="fn18 theme text-center bold">
       装修该花多少钱，轻松获取装修报价
       <i class="iconfont dialog-close">&#xe610;</i>
@@ -473,8 +537,13 @@
           $(".carousel .year").text(year)
         }
       });
-
-      var swiper = new Swiper('.swiper-container', {
+      
+      new Swiper('.iconNav', {
+        slidesPerView: 5,
+        spaceBetween: 10,
+        loop: false
+      });
+      var swiper = new Swiper('.swiper2', {
         slidesPerView: 1,
         loop: true,
         pagination: {

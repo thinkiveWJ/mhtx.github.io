@@ -74,6 +74,9 @@
           <p>4、有良好的工作态度和团队合作精神。</p>
           <p>5、优秀的应往届毕业生可适当放宽条件。</p>
           <p>6、甘于平凡，追求高质量的生活，请抓紧机会，设计创新的各类政策正在来袭。</p>
+          <div class="apply mt10">
+            <a href="" class="apply-btn">立即申请</a>
+          </div>
         </div>
       </li>
       <li>
@@ -97,6 +100,9 @@
           <p>4、有良好的工作态度和团队合作精神。</p>
           <p>5、优秀的应往届毕业生可适当放宽条件。</p>
           <p>6、甘于平凡，追求高质量的生活，请抓紧机会，设计创新的各类政策正在来袭。</p>
+          <div class="apply mt10">
+            <a href="" class="apply-btn">立即申请</a>
+          </div>
         </div>
       </li>
       <li>
@@ -120,6 +126,9 @@
           <p>4、有良好的工作态度和团队合作精神。</p>
           <p>5、优秀的应往届毕业生可适当放宽条件。</p>
           <p>6、甘于平凡，追求高质量的生活，请抓紧机会，设计创新的各类政策正在来袭。</p>
+          <div class="apply mt10">
+            <a href="" class="apply-btn">立即申请</a>
+          </div>
         </div>
       </li>
     </ul>
@@ -191,7 +200,7 @@
     </ul>
   </section>
   <!-- 报价弹窗 -->
-  <section class="dialog none">
+  <section id="dialog" class="dialog none">
     <div class="fn18 theme text-center bold">
       装修该花多少钱，轻松获取装修报价
       <i class="iconfont dialog-close">&#xe610;</i>
@@ -222,6 +231,23 @@
   </section>
   <section class="dialog-bg none"></section>
 
+  <!-- 申请弹窗 -->
+  <section id="apply" class="dialog none">
+    <div class="fn18 theme text-center bold">
+      职位申请
+      <i class="iconfont dialog-close">&#xe610;</i>
+    </div>
+    <!-- <div class="fn14 mt10 text-center bold">你家的装修预算 <span class="theme fn20">159800</span> 元</div>
+    <div class="text-center fn9 c6 mtb10"><img src="../imgs/calcultor.png" class="calcultor" alt=""> 装修计算机报价明细精准度达到98%</div>
+    <div class="title-bg fn16 text-center white">精准报价 帮您规避装修问题</div> -->
+    <form class="mt15 fn11">
+      <input type="text" class="block-input mt10" placeholder="选输入您的姓名">
+      <input type="text" class="block-input mt10" placeholder="选输入您的手机号">
+      <textarea class="mt10" placeholder="请输入求职意向"></textarea>
+      <a href="" class="theme-btn mt10">立即提交</a>
+    </form>
+    <!-- <div class="fn10 c6 mt10 text-center"><img src="../imgs/dialog_pic02.png" class="w12_5" alt=""> 您的信息我们将严格保密，请放心输入</div> -->
+  </section>
 
   <script src="../js/jquery-3.3.1.min.js"></script>
   <script src="../libs/swiper/js/swiper.min.js"></script>
@@ -248,6 +274,13 @@
     $("#join a").click(function(e){
       e.preventDefault();
       $(this).next().slideToggle();
+    });
+
+    // 点击申请
+    $(".apply-btn").click(function(e){
+      e.preventDefault();
+      $("#apply").fadeIn();
+      $(".dialog-bg").fadeIn();
     });
   });
   </script>

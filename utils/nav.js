@@ -7,11 +7,12 @@ $(function(){
   // dialog
   $(".dialog-bg, .dialog-close").click(function(){
     $(".dialog-bg").fadeOut();
-    $(".dialog").fadeOut();
+    $("#dialog").fadeOut();
+    $("#apply").fadeOut();
   });
   $(".fixed-bottom ul li:last-child a").click(function(e){
     e.preventDefault();
-    $(".dialog-bg, .dialog").fadeIn();
+    $(".dialog-bg, #dialog").fadeIn();
   });
 
 
